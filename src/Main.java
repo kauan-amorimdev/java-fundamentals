@@ -1,15 +1,27 @@
 public class Main{
     public static void main(String[] args){
-        double[] notas = {4.2, 3.0, 1.5, 2.9, 10.0};
-        double mediaf = calcularMedia(notas);
-        System.out.println("A media é: " + mediaf);
+        Carro p1 = new Carro();
+            p1.marca = "Toyota";
+            p1.modelo = "corola";
+            p1.ano = 2000;
+            p1.mostrar();
+        Carro p2 = new Carro();
+        p2.marca = "Ford";
+        p2.modelo = "um";
+        p2.ano = 1986;
+        System.out.println("\nSegundo carro abaixo:\n");
+        p2.mostrar();
     }
-    public static double calcularMedia(double[] notas){
-        double media = 0;
-        for (int i = 0; i < notas.length ; i++) {
-            media += notas[i];
-            System.out.println(notas[i]);
-        }
-        return media/ notas.length;
+}
+
+class Carro {
+    String marca;
+    String modelo;
+    int ano;
+
+    public void mostrar(){
+        System.out.println(marca);
+        System.out.println(modelo);
+        System.out.println(ano);
     }
 }
