@@ -1,15 +1,14 @@
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
-    Pessoa p1 = new Pessoa("Carlos", 22);
-    mostrar(p1);
-    p1.setIdade(35);
-    p1.setNome("teste ja");
-    mostrar(p1);
+    Aluno aluno1 = new Aluno("rodrigo", 5.4);
+    mostrarAluno(aluno1);
+    aluno1.setNota(4.3);
+    mostrarAluno(aluno1);
     }
 
-    public static void mostrar(Pessoa p1){
-        System.out.println("nome: " + p1.getNome());
-        System.out.println("idade: " + p1.getIdade());
+    public static void mostrarAluno(Aluno aluno){
+        System.out.println("Nome: " + aluno.getNome());
+        System.out.println("Nota: " + aluno.getNota());
     }
 }
