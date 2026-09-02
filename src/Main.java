@@ -1,27 +1,15 @@
-public class Main{
+import java.util.Scanner;
+public class Main {
     public static void main(String[] args){
-        Carro p1 = new Carro();
-            p1.marca = "Toyota";
-            p1.modelo = "corola";
-            p1.ano = 2000;
-            p1.mostrar();
-        Carro p2 = new Carro();
-        p2.marca = "Ford";
-        p2.modelo = "um";
-        p2.ano = 1986;
-        System.out.println("\nSegundo carro abaixo:\n");
-        p2.mostrar();
+    Pessoa p1 = new Pessoa("Carlos", 22);
+    mostrar(p1);
+    p1.setIdade(35);
+    p1.setNome("teste ja");
+    mostrar(p1);
     }
-}
 
-class Carro {
-    String marca;
-    String modelo;
-    int ano;
-
-    public void mostrar(){
-        System.out.println(marca);
-        System.out.println(modelo);
-        System.out.println(ano);
+    public static void mostrar(Pessoa p1){
+        System.out.println("nome: " + p1.getNome());
+        System.out.println("idade: " + p1.getIdade());
     }
 }
