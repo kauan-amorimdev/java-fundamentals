@@ -1,24 +1,22 @@
 public class Aluno {
-   private String nome;
-    private double nota;
+    private String matricula;
+    private String nome;
 
-    public Aluno(String nome, double nota){
-        this.nome = nome;
-        this.nota = nota;
+    public Aluno(){
+        this("Desconhecido", "Sem matricula");
     }
 
+    public Aluno(String nome){
+        this(nome, "Sem matricula");
+    }
+    public Aluno(String nome, String matricula){
+        this.nome = nome;
+        this.matricula = matricula;
+    }
     public String getNome(){
         return nome;
     }
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-    public double getNota(){
-        return nota;
-    }
-    public void setNota(double nota){
-        if (nota >= 0 && nota <= 10) {
-            this.nota = nota;
-        }
+    public String getMatricula(){
+        return matricula;
     }
 }
