@@ -1,14 +1,14 @@
-import java.util.Scanner;
 public class Main {
     public static void main(String[] args){
-    Aluno aluno1 = new Aluno("rodrigo", 5.4);
-    mostrarAluno(aluno1);
-    aluno1.setNota(4.3);
-    mostrarAluno(aluno1);
+    Conta conta1 = new Conta();
+    Conta conta2 = new Conta("kauan");
+    Conta conta3 = new Conta("kauan", 2000.0);
+    mostrar(conta1, conta2, conta3);
     }
 
-    public static void mostrarAluno(Aluno aluno){
-        System.out.println("Nome: " + aluno.getNome());
-        System.out.println("Nota: " + aluno.getNota());
+    public static void mostrar(Conta conta1, Conta conta2, Conta conta3){
+        System.out.println("Titular: " + conta1.getTitular() + " Saldo: R$ " + conta1.getSaldo());
+        System.out.println("Titular: " + conta2.getTitular() + " Saldo: R$" + conta2.getSaldo());
+        System.out.println("Titular: " + conta3.getTitular() + " Saldo: R$" + conta3.getSaldo());
     }
 }
