@@ -1,17 +1,23 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        BankAccount c1 = new BankAccount("12345");
-        BankAccount c2 = new BankAccount("kauan", "123");
-        BankAccount c3 = new BankAccount("1234", 89.4);
-        BankAccount c4 = new BankAccount("kauan", 6000.0, "1");
-        mostrar(c1);
-        mostrar(c2);
-        mostrar(c3);
-        mostrar(c4);
-        System.out.println("Foram criadas: " + BankAccount.contadorC + " contas");
-    }
+        Scanner scanner = new Scanner(System.in);
 
-    public static void mostrar(BankAccount conta){
-        System.out.println("titular: " + conta.getTitular() + " saldo: " + conta.getSaldo() + " id: " + conta.getIdt());
+        System.out.println("===== Questão 1 - Média =====");
+        Media.calcularMedia(scanner);
+
+        System.out.println("\n===== Questão 2 - Múltiplos =====");
+        System.out.println("Insira o número que deseja: ");
+        int numeroMultiplo = scanner.nextInt();
+        Multiplo.mostrar(numeroMultiplo);
+
+        System.out.println("\n===== Questão 3 - Números primos =====");
+        System.out.println("Insira o valor de N: ");
+        int n = scanner.nextInt();
+        Primo.verificarPrimo(n);
+
+        System.out.println("\n===== Questão 4 - Asteriscos =====");
+        Asteriscos.mostrarAsteriscos(scanner);
     }
 }
